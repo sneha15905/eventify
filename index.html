@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <title>1st page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+        
+        nav ul li a:hover {
+            font-size: 18px; 
+        }
+
+        .carousel-caption {
+            color: rgb(7, 40, 72); 
+        }
+
+        .carousel-item img {
+            height: 400px; 
+            max-width: 100%;
+            object-fit: contain; 
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url("https://plus.unsplash.com/premium_photo-1670595337767-1af7ce73df5c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hhdCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        header {
+            background-color: #0077b6; 
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cta {
+            background-color: #b5c7cd; 
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta:hover {
+            background-color: #598993; }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .feature {
+            text-align: center;
+            margin: 20px;
+            flex: 1 1 300px;
+        }
+
+        .feature img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 16px;
+        }
+
+
+        footer {
+            background-color: #023e8a; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+       
+
+        
+    
+    </style>
+</head>
+<body>
+    <body>
+        <header>
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">EVENTify</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="achi.html">Achievements</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pricing.html">Pricing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to EVENTify</h1>
+            <p>Register for the events happening in cbit</p>
+        </div>
+    </section>
+
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/236x/6e/24/ba/6e24baa4a64f923ddb0d88db4e204232.jpg" class="d-block w-100" alt="Sports Image">
+                <div class="carousel-caption d-none d-md-block" style="text-decoration: #4e008d;">
+                    <h5>Sports</h5>
+                    <p>Get ready for an adrenaline-pumping experience with our exciting sports events!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/cd/d8/f8/cdd8f8cc3248eeea4b395ee8c14d2e8a.jpg" class="d-block w-100" alt="Technical Events Image">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Technical Events</h5>
+                    <p>Unleash your technical prowess at our cutting-edge technical events!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/236x/d9/50/c2/d950c2dcb76d47aaaa9a6d78c5ac909d.jpg" class="d-block w-100" alt="Dance and Singing Image">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Dance and Singing</h5>
+                    <p>Unleash your creative spirit with our captivating dance and singing performances!</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div style="text-align: center;">
+        
+        <a href="#loginp.html" class="cta" onclick="showMessageAndRedirect()">Get Started</a>
+    </div>
+
+    <hr>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Us</span></h2>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8">
+                    <h3>Contact Information</h3>
+                    <p>Email: anaksnesri@gmail.com</p>
+                    <p>Phone: 9377000954</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+        <section class="about" id="about">
+            <h2 class="heading">About <span>Us</span></h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>About Us</h3>
+                        <p>This is a brief description of our company and what we do.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="faq" id="faq">
+            <h2 class="heading">Frequently <span>Asked Questions</span></h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>FAQ</h3>
+                        <p>Here are some common questions and their answers.</p>
+                    </div>
+                </div>
+            </div>
+        </section><hr>
+        <section class="terms" id="terms">
+            <h2 class="heading">Terms <span>of Service</span></h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Terms of Service</h3>
+                        <p>These are the terms and conditions governing the use of our service.</p>
+                    </div>
+                </div>
+            </div>
+        </section><hr>
+        <section class="privacy-policy" id="privacy-policy">
+            <h2 class="heading">Privacy <span>Policy</span></h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Privacy Policy</h3>
+                        <p>This is our privacy policy outlining how we collect and use personal information.</p>
+                    </div>
+                </div>
+            </div>
+        </section><hr>
+        <footer>
+            <div class="footer-logo">EVENTify</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#privacypolicy">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </footer>
+        
+
+<script>
+    
+    function showMessageAndRedirect() {
+        
+        alert("Thank you for your interest! Please login to get started.");
+        window.location.href = "loginp.html";
+    }
+    document.getElementById('navbarToggler').addEventListener('click', function() {
+     const navbarCollapse = document.querySelector('.navbar-collapse');
+    navbarCollapse.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>

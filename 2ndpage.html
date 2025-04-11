@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College - Events</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("https://imgs.search.brave.com/iONfnH4g0K5IxU96R5xwHktDBa8Qu6a6_JTYKggyUhc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA0LzQ3LzE2LzMz/LzM2MF9GXzQ0NzE2/MzMzOV8wNnZSVTA5/WnNKRFVSeFlMM3FB/bWp5UnI1dTV0emlX/Zi5qcGc");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: #45359e; 
+    color: #dbf1e9;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #e9f0f3fa;
+    text-decoration: none;
+    font-weight: bold;
+}
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.event {
+    background-color: #2987ac7f;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    flex: 1 1 300px; 
+    margin: 10px;
+}
+
+.event h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.event p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.btn-outline-primary {
+    background-color: #53339232; 
+    color: #fff; 
+    border-radius: 50px; 
+    border: none; 
+    cursor: pointer;
+    padding: 15px 30px;
+    font-size: 20px;
+}
+
+.btn-outline-primary:hover {
+    background-color: #30d0d0af; 
+}
+
+.cta .btn-lg {
+    padding: 15px 30px; 
+    font-size: 20px; 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #280881; 
+    color: #edfaf7;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">EVENTify</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pricing.html">pricing</a></li>
+            <li><a href="achi.html">Achievements</a></li>
+        
+        </ul>
+    </nav>
+    
+</header>
+<main>
+    <div class="event">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf-ynZBdC5vaqrfS6YCn56m728xylLsO-AIig3d-W4Kw&s" alt="Cultural Event">
+        <h2>Cultural Events</h2>
+        <p>Explore our vibrant cultural events featuring music, dance, and art exhibitions.</p>
+        <a href="student_cultural_registration.html" class="cta"><button type="button" class="btn btn-outline-primary btn-lg">Register</button></a>
+    </div>
+    <div class="event">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaOyEqvdJm-Umoci7-M2OXWcH586PA5qYeZz3HITk9jA&s" alt="Educational Event">
+        <h2>TECH Events</h2>
+        <p>Join our educational events covering a wide range of topics from technology to business.</p>
+        <a href="student_technical_registration.html" class="cta"><button type="button" class="btn btn-outline-primary btn-lg">Register</button></a>
+    </div>
+    <div class="event">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWtHLPjX-JJM07u-UG61ByiCidZxeBptbruNLtiYjHfg&s" alt="Sports Event">
+        <h2>Sports Events</h2>
+        <p>Participate in thrilling sports events including tournaments and fitness challenges.</p>
+        <a href="student_sports_registration.html" class="cta"><button type="button" class="btn btn-outline-primary btn-lg">Register</button></a>
+    </div>
+</main>
+<footer>
+    <div class="footer-logo" style="color: whitesmoke;">EVENTify</div>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#privacypolicy">Privacy Policy</a></li>
+        </ul>
+    </nav>
+</footer>
+<script>
+function redirectToLoginPage() {
+    window.location.href = 'login.html'; 
+}
+</script>
+</body>
+</html>

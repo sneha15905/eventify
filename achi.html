@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Achievements</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       
+        body{
+            background-image: url("https://i.pinimg.com/236x/18/ab/53/18ab5313673facff9c814e1baeb0e5d3.jpg");
+            color: rgba(192, 136, 136, 0.994);
+        }
+        #student-achievements {
+            padding: 2rem;
+        }
+
+        .filter-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 1rem;
+        }
+
+        .achievement-card {
+            background-color: #2ebbd465;
+            padding: 1rem;
+            color: antiquewhite;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(225, 220, 220, 0.829);
+        }
+
+        .certificate-thumbnail {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .download-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: #020a37f1;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">EVENTify</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="homep.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="achi.html">Achievements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    
+      
+    <section id="student-achievements">
+        <h2>Student Achievements</h2>
+        
+        <div class="achievement-grid">
+
+            <div class="achievement-card">
+                <h3 class="student-name">Anitha</h3>
+                <p class="program">Bachelor of Science in Computer Science</p>
+                <p class="achievement-description">Graduated with Honors</p>
+                <a href="certificates/john-doe-degree.pdf" class="download-link" onclick="downloadCertificate('Bachelor of Science in Computer Science')">Download Certificate</a>
+            </div>
+            <div class="achievement-card">
+                <h3 class="student-name">Anitha</h3>
+                <p class="program">Master of Business Administration</p>
+                <p class="achievement-description">Best Student Leadership Award</p>
+                <a href="certificates/jane-smith-award.pdf" class="download-link" onclick="downloadCertificate('Master of Business Administration')">Download Certificate</a>
+            </div>
+            <div class="achievement-card">
+                <h3 class="student-name">Anitha</h3>
+                <p class="program">Hacktoberfesr</p>
+                <p class="achievement-description">1st in Hacktoberfesr</p>
+                <a href="certificates/john-doe-degree.pdf" class="download-link" onclick="downloadCertificate('Hacktoberfesr')">Download Certificate</a>
+            </div>
+            <div class="achievement-card">
+                <h3 class="student-name">Anitha</h3>
+                <p class="program">singing competetion</p>
+                <p class="achievement-description">won singing competetion</p>
+                <a href="certificates/john-doe-degree.pdf" class="download-link" onclick="downloadCertificate('Singing Competition')">Download Certificate</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        function downloadCertificate(achievement) {
+            event.preventDefault();
+            alert("Your " + achievement + " certificate is downloaded.");
+        }
+
+document.getElementById('navbarToggler').addEventListener('click', function() {
+     const navbarCollapse = document.querySelector('.navbar-collapse');
+    navbarCollapse.classList.toggle('show');
+});
+
+    </script>
+</body>
+</html>

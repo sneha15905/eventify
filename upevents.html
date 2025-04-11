@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/236x/3f/d3/5d/3fd35d0ae3dd6011adf9352e998ad67f.jpg");
+        }
+        .countdown-card {
+            border: 1px solid #d13a3a;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(224, 209, 209, 0.928);
+            background-color: #0c5774bd;
+            color: #fff; 
+        }
+        .countdown-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .countdown-timer {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container" style="background-color: rgba(127, 255, 212, 0.584);">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">EVENTy</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="achi.html">Achievements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html" disabled>Pricing</a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div style="background-color: rgba(127, 255, 212, 0.584);">
+        <h1>Upcoming Events</h1>
+    </div>
+
+    <div class="countdown-card" id="event1">
+        <h2 class="countdown-title">Hackathon  Countdown:</h2>
+        <img src="https://i.pinimg.com/236x/86/04/73/860473cf2fd23fd4696baed373d1622e.jpg" alt="Hackathon 1 Image"  style="display: block; margin: 0 auto;"> <!-- Added alt attribute for image -->
+        <div class="countdown-timer" id="event1Countdown"></div>
+    </div>
+
+    <div class="countdown-card" id="event2">
+        <h2 class="countdown-title">Dance Competition  Countdown:</h2> 
+        <img src="https://i.pinimg.com/236x/26/cf/3f/26cf3f0b72b0c22ced887a90728bc326.jpg" alt="Dance Competition 2 Image"  style="display: block; margin: 0 auto;"> <!-- Added alt attribute for image -->
+        <div class="countdown-timer" id="event2Countdown"></div>
+    </div>
+
+ 
+    <script>
+        function toggleNavbar() {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+            } else {
+                navbarCollapse.classList.add('show');
+            }
+        }
+
+        
+        const event1Date = new Date(2024, 5, 1, 18, 30, 0); 
+        const event2Date = new Date(2024, 6, 15, 12, 0, 0); 
+
+        function updateCountdown(eventDate, elementId) {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById(elementId).innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(() => {
+            updateCountdown(event1Date, 'event1Countdown');
+            updateCountdown(event2Date, 'event2Countdown');
+        }, 1000);
+    </script>
+</body>
+</html>

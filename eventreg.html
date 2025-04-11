@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Event Registration</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h2 class="mt-5">College Event Registration</h2>
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" class="form-control" id="dob" required>
+    </div>
+    <div class="form-group">
+      <label for="college_name">College Name:</label>
+      <input type="text" class="form-control" id="college_name" placeholder="Enter your college name" required>
+    </div>
+    <div class="form-group">
+      <label for="branch">Branch:</label>
+      <input type="text" class="form-control" id="branch" placeholder="Enter your branch" required>
+    </div>
+    <div class="form-group">
+      <label for="event"> Name of the Event:</label>
+      <select class="form-control" id="event" required>
+        <option value="">Select</option>
+        <option value="Sports">Sports</option>
+        <option value="Cultural">Cultural</option>
+        <option value="Technical">Technical</option>
+        <option value="Social">Social</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>
+
+<script>
+  function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var dob = document.getElementById("dob").value;
+    var collegeName = document.getElementById("college_name").value;
+    var branch = document.getElementById("branch").value;
+    var event = document.getElementById("event").value;
+
+    // Perform validation here, for example:
+    if (name === "" || email === "" || phone === "" || dob === "" || collegeName === "" || branch === "" || event === "") {
+      alert("Please fill out all fields.");
+      return false; // Prevent form submission
+    }
+
+    // Perform validation here
+if (name.trim() === "" || email.trim() === "" || phone.trim() === "" || dob.trim() === "" || collegeName.trim() === "" || branch.trim() === "" || event.trim() === "") {
+    alert("Please fill out all fields.");
+    return false; // Prevent form submission
+}
+
+// Additional validation for email format
+var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    return false; // Prevent form submission
+}
+
+// Additional validation for phone number format (assuming 10 digits)
+var phonePattern = /^\d{10}$/;
+if (!phonePattern.test(phone)) {
+    alert("Please enter a valid 10-digit phone number.");
+    return false; // Prevent form submission
+}
+
+// You can add more validation rules as needed for other fields
+
+// If all validations pass, the form submission proceeds
+return true;
+
+
+    // If all fields are filled, you can redirect to the next page
+    // For demonstration, let's redirect to Google's homepage
+    window.location.href = "https://www.google.com";
+    
+    // Prevent form submission (remove this line if you want the form to submit normally)
+    return false;
+  }
+</script>
+
+</body>
+</html>
